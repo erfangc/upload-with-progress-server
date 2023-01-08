@@ -15,7 +15,7 @@ class UploadController {
     @PostMapping(value = ["upload"])
     fun upload(@RequestParam file: MultipartFile): UploadResponse {
         log.info(
-            "Uploading file bytes=${file.bytes} " + "contentType=${file.contentType} " + "size=${file.size} " + "originalFilename=${file.originalFilename} "
+            "Uploading file " + "contentType=${file.contentType} " + "size=${file.size} " + "originalFilename=${file.originalFilename} "
         )
         return UploadResponse(message = "Ok")
     }
